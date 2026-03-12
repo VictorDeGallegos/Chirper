@@ -89,6 +89,9 @@
 <footer class="footer footer-center p-5 bg-base-300 text-base-content text-xs">
     <div>
         <p>© 2026 Chirper - Built with Laravel and ❤️</p>
+        <p>
+            <a href="https://github.com/VictorDeGallegos/Chirper" target="_blank" class="link link-hover">GitHub</a>
+        </p>
     </div>
 </footer>
 </body>
