@@ -33,6 +33,7 @@
                         @endif
                     </div>
 
+                    @can('update', $chirp)
                     <div class="flex gap-1">
                         <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-ghost btn-xs">
                             Edit
@@ -47,6 +48,7 @@
                             </button>
                         </form>
                     </div>
+                    @endcan
                 </div>
                 <p class="mt-1">{{ $chirp->message }}</p>
             </div>
