@@ -51,7 +51,7 @@ class ChirpPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Chirp $chirp): bool
+    public function restore(User $user): bool
     {
         return false;
     }
@@ -59,13 +59,13 @@ class ChirpPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Chirp $chirp): bool
+    public function forceDelete(User $user): bool
     {
         return false;
     }
 
     private function isOwner(User $user, Chirp $chirp): bool
     {
-        return $chirp->user()->is($user);
+        return $chirp->user_id === $user->id;
     }
 }
